@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/v1/tlc")
 @CrossOrigin
@@ -20,6 +18,6 @@ public class TlcController {
     public ResponseEntity<DriverResponse> fetchData(@PathVariable String licenseNumber) {
         DriverResponse driverResponses = tlcService.getVehicleData(licenseNumber);
 
-        return ResponseEntity.ok(driverResponses); // Return 200 OK with the DriverResponse data
+        return ResponseEntity.ok(driverResponses);
     }
 }
