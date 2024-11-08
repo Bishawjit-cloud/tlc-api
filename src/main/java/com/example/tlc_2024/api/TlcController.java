@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/tlc")
 // if UI is added as static content using this annotation is optional
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class TlcController {
 
     @Autowired
